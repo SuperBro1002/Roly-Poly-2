@@ -20,12 +20,13 @@
 
             }
             create() {
+                this.add.text(200,200,"Ran out of time lol");
                 this.platforms = this.physics.add.staticGroup();
                 this.platforms.create(0, 600, 'ground').setSize(800, 200);
                 this.player = this.physics.add.sprite(100, 100, 'rolypoly').setSize(50, 100);
                 this.physics.add.collider(this.player, this.platforms);
-
-            }
+                
+                        }
             update() {
                 var pointer = scene.input.activePointer;
                 if (pointer.isDown) {
